@@ -1,24 +1,22 @@
 $(document).ready(function() {
+	var timeLeft = 30;
+	var $elem = $('#timer');
 
+	var timerId = setInterval(countdown, 1000);
 
-var timeLeft = 30;
-var elem = document.getElementById('#timer');
+	$elem.empty();
+	$elem.text(timeLeft);
 
-var timerId = setInterval(countdown, 1000);
+	function countdown() {
+		if (timeLeft == 0) {
+			clearTimeout(timerId);
+			alert('Times up!');
 
-$('#timer').empty();
-$('#timer').append(timeLeft);
-
-function countdown() {
-  if (timeLeft == 0) {
-    clearTimeout(timerId);
-    alert('Times up!');
-
-  } else {
-    elem.innerHTML = timeLeft + ' Time Remaining';
-    timeLeft--;
-  }
-}
+		} else {
+			$elem.text(timeLeft + ' Time Remaining');
+			timeLeft--;
+		}
+	}
 })
 
 
