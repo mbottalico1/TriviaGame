@@ -36,6 +36,7 @@ $(document).ready(function() {
       clearTimeout(timerId);
       alert('Times up!');
       endGame();
+      $wholePage.hide()
       // TODO: call endGame() !
     } else {
       $timer.text(timeLeft);
