@@ -8,84 +8,83 @@
     <!-- Bootstrap should be loaded before your custom styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
     <!-- Don"t use inline styles! -->
     <style>
-      ul {
+    ul {
         list-style: none;
-      }
+    }
     </style>
 </head>
 
 <body>
     <div id="wholePage">
-      <h1>Trivia Game!</h1>
-      <h3 id="Time">Time Remaining:
+        <h1>Trivia Game!</h1>
+        <h3 id="Time">Time Remaining:
         <span id="timer"></span>
       </h3>
-
-      <div class="question">
-        <p id="Question1">Which basketball team won the 2016 NBA Championship?</p>
-        <div class="Answers1">
-            <div class="row">
+        <div class="question">
+            <p id="Question1">1. Which basketball team won the 2016 NBA Championship?</p>
+            <div class="Answers1">
+                <div class="row">
+                    <ul>
+                        <!-- use data- attributes to determine what was selected -->
+                        <li>
+                            <input type="checkbox" data-answer="warriors">Warriors
+                        </li>
+                        <li>
+                            <input type="checkbox" data-answer="cavaliers">Cavaliers
+                        </li>
+                        <li>
+                            <input type="checkbox" data-answer="spurs">Spurs
+                        </li>
+                        <li>
+                            <input type="checkbox" data-answer="pacers">Pacers
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="question">
+            <p id="Question2">2. Which of these Breaking Bad Characters got there own spinoff TV show after the series ended?</p>
+            <div class="Answers2">
                 <ul>
-                    <!-- use data- attributes to determine what was selected -->
                     <li>
-                        <input type="checkbox" data-answer="warriors">Warriors
-                      </li>
+                        <input type="checkbox">Jesse Pinkman</li>
                     <li>
-                        <input type="checkbox" data-answer="cavaliers">Cavaliers
-                    </li>
+                        <input type="checkbox">Gus Fring</li>
                     <li>
-                        <input type="checkbox" data-answer="spurs">Spurs
-                    </li>
+                        <input type="checkbox">Saul Goodman</li>
                     <li>
-                        <input type="checkbox" data-answer="pacers">Pacers
-                    </li>
+                        <input type="checkbox">Hank Schrader</li>
                 </ul>
             </div>
         </div>
-      </div>
-
-      <div class="question">
-        <p id="Question2">Which of these Breaking Bad Characters got there own spinoff TV show after the series ended?</p>
-        <div class="Answers2">
-            <ul>
-                <li>
-                    <input type="checkbox">Jesse Pinkman</li>
-                <li>
-                    <input type="checkbox">Gus Fring</li>
-                <li>
-                    <input type="checkbox">Saul Goodman</li>
-                <li>
-                    <input type="checkbox">Hank Schrader</li>
-            </ul>
+        <div class="question">
+            <p id="Question3">3. Which of these fish are known for being the fastest swimming?</p>
+            <div class="Answers3">
+                <ul>
+                    <li>
+                        <input type="checkbox">Shark</li>
+                    <li>
+                        <input type="checkbox">Swordfish</li>
+                    <li>
+                        <input type="checkbox">Marlin</li>
+                    <li>
+                        <input type="checkbox">Sailfish</li>
+                </ul>
+            </div>
         </div>
-      </div>
-
-      <div class="question">
-        <p id="Question3">Which of these fish are known for being the fastest swimming?</p>
-        <div class="Answers3">
-            <ul>
-                <li>
-                    <input type="checkbox">Shark</li>
-                <li>
-                    <input type="checkbox">Swordfish</li>
-                <li>
-                    <input type="checkbox">Marlin</li>
-                <li>
-                    <input type="checkbox">Sailfish</li>
-            </ul>
-        </div>
-      </div>
-
-      <button id="Submit">Submit</button>
+        <button id="Submit">Submit</button>
     </div>
+    <br>
     <div id="results">
-      <p>Correct Answers: <span id="correct-answers"></span></p>
-      <!-- TODO: add in the other stats for the results page! -->
+        <p>Correct Answers:
+            <br>
+            <span id="correct-answers">1. Cavaliers,<br>
+       2. Saul Goodman, <br>
+       3. Sailfish</span></p>
+        <!-- TODO: add in the other stats for the results page! -->
     </div>
-
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
